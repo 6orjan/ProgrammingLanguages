@@ -18,10 +18,14 @@ class myNumber{
 	int getNum2() {
 		return num2;
 	}
-	void description()
+	float average()
 	{
-		System.out.println(num);
-		System.out.println(num2);
+		return (float)(num + num2)/2;
+	}
+	 void description()
+	{
+		System.out.println("Number one is " + num);
+		System.out.println("Number two is " + num2);
 	}
 	public myNumber(int num1,int num2)
 	{
@@ -32,11 +36,12 @@ class myNumber{
 
 public class myEaxmple {
 	public static void main (String[] args) {
-		myNumber A = new myNumber();
-		System.out.println(A.getNum());
-		A.setNum(10);
-		System.out.println(A.getNum());
-		System.out.println(A.num2);
+		myNumber A = new myNumber(10,15);
+	
+		A.description();
+		System.out.println(A.average());
+		
+		
 	}
 }
  
