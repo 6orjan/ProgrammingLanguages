@@ -39,7 +39,7 @@ public class myEaxmple {
 		myNumber A = new myNumber(10,15);
 	
 		A.description();
-		System.out.println(A.average());
+		System.out.println("The average is " + A.average());
 		
 		
 	}
