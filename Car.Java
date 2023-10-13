@@ -95,6 +95,16 @@ public class Vezba2 {
 		else {
 			System.out.println("They have the same amount of seats");
 		}
+		
+		int no_cars = 2;
+		Car[] Drivepark = new Car[no_cars];
+		
+		
+		Drivepark[0] = new Car("Honda", 3, "Diesel","Cream");
+		Drivepark[1] = new Car("Ford", 6, "Benzin","Red");
+		System.out.println(Drivepark[1].getType());
 	}
+	
+	
 
 }
