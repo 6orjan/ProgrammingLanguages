@@ -15,6 +15,19 @@ class myNumber{
 		num = i;
 		num2 = 10*i;
 	}
+	int getNum2() {
+		return num2;
+	}
+	void description()
+	{
+		System.out.println(num);
+		System.out.println(num2);
+	}
+	public myNumber(int num1,int num2)
+	{
+		this.num = num1;
+		this.num2 = num2; 
+	}
 }
 
 public class myEaxmple {
