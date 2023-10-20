@@ -18,7 +18,7 @@ public class zadacha1 {
 		
 		System.out.println("The string starts with com " + sentence.startsWith("com"));
 		System.out.println("The string ends with ion " + sentence.endsWith("ion"));
-		String newstr = sentence.substring(0,1);
+		System.out.println("The strings first two letters " + sentence.substring(0,2));
 		System.out.println("Substituting e with o " + sentence.replaceAll("e","o"));
 		System.out.println("Substituting Compu with Calculo " + sentence.replace("Compu","Calculo"));
 	}
