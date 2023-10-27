@@ -33,12 +33,12 @@ public class classVExericseII {
 		System.out.println("For the hen's egg: ");
 		henegg.printEgg();
 		henegg.print();
-		System.out.println("The category is: " + henegg.category);
+		System.out.println("The category is: " + henegg.getCategory());
 		
 		System.out.println("For the ostrich egg: ");
 		ostrichegg.printEgg();
 		ostrichegg.print();
-		System.out.println("The category is: " + ostrichegg.category);
+		System.out.println("The category is: " + ostrichegg.getCategory());
 	}
 
 }
