@@ -2,10 +2,9 @@ package verificationTest;
 
 public class classVExericseII {
 
-	public static class Egg{
+	 static class Egg{
 		public void printEgg() {
 			System.out.println("Each egg has an albumen and yolk");
-			int category;
 		}
 		public void print() {
 			System.out.println("An egg is a nutritional product");
@@ -15,7 +14,7 @@ public class classVExericseII {
 			category = c;
 		}
 	}
-	public static class ostrich_egg extends Egg{
+	 static class ostrich_egg extends Egg{
 		public ostrich_egg(int c) {
 			super(c);
 			System.out.println("A constructor of ostrich_egg that utilizes the constructor of egg");
