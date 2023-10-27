@@ -13,11 +13,14 @@ public class classVExericseII {
 		public Egg (int c) {
 			category = c;
 		}
+		public int getCategory() {
+			return category;
+		}
 	}
 	 static class ostrich_egg extends Egg{
 		public ostrich_egg(int c) {
 			super(c);
-			System.out.println("A constructor of ostrich_egg that utilizes the constructor of egg");
+			
 		}
 
 		public void Egg() {
@@ -26,10 +29,16 @@ public class classVExericseII {
 	}
 	public static void main(String[] args) {
 		Egg henegg = new Egg(1);
-		Egg ostrichegg = new ostrich_egg(1);
+		Egg ostrichegg = new ostrich_egg(2);
+		System.out.println("For the hen's egg: ");
 		henegg.printEgg();
 		henegg.print();
+		System.out.println("The category is: " + henegg.category);
+		
+		System.out.println("For the ostrich egg: ");
 		ostrichegg.printEgg();
+		ostrichegg.print();
+		System.out.println("The category is: " + ostrichegg.category);
 	}
 
 }
