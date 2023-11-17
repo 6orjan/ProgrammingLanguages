@@ -1,4 +1,5 @@
 
+
 import java.util.Random;
 
 interface Average {
@@ -75,7 +76,7 @@ public class Exercise4 {
 	public static void main(String[] args) {
 		Employee[] parents = new Employee[6];
         for (int i = 0; i < 6; i++) {
-            parents[i] = new Employee("Parent " + (i + 1), i < 2 ? 0 : 12);
+        	parents[i] = new Employee("Parent " + (i + 1), 12);
         }
 
         Student[] students = new Student[3];
