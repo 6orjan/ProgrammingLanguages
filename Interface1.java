@@ -1,77 +1,66 @@
 
- interface Two_D_Shape{
-	 static double PI = 3.14;
-	
-	 void parameters();
-	 float area();
-	 float perimeter();
+ interface Two_D_Shape {
+    float PI = 3.14f;
+    void parameters();
+    float area();
+    float perimeter();
 }
- 
- interface Three_D_Shape{
-	 float volume();
- }
 
-class Triangle implements Two_D_Shape{
-	 int sideA, sideB, sideC, height;
-	 Triangle(int a, int b, int c, int h)
-	 {
-		 sideA = a;
-		 sideB = b;
-		 sideC = c;
-		 height = h;
-		 System.out.println("A new triangle is created");
-	 }
-	 
-	 boolean rectangular(double a, double b, double c) {
-		 return (Math.pow(a, 2) + Math.pow(b, 2) == Math.pow(c, 2) ? true : false);
-	 }
-	 
-	@Override
-	public void parameters() {
-		// TODO Auto-generated method stub
-		
-	}
-	@Override
-	public float area() {
-		// TODO Auto-generated method stub
-		return 0;
-	}
-	@Override
-	public float perimeter() {
-		// TODO Auto-generated method stub
-		return 0;
-	}
-	 
- }
+interface Three_D_Shape {
+    float volume();
+}
 
-class Sphere implements Two_D_Shape, Three_D_Shape{
+class Triangle implements Two_D_Shape {
+    float sideA, sideB, sideC, height;
 
-	double radius;
-	
-	Sphere(double radius)
-	{
-		this.radius = radius;
-		System.out.println("A new sphere has been created");
-	}
-	
-	@Override
-	public void parameters() {
-		// TODO Auto-generated method stub
-		
-	}
+    Triangle(float sideA, float sideB, float sideC, float height) {
+        this.sideA = sideA;
+        this.sideB = sideB;
+        this.sideC = sideC;
+        this.height = height;
+        System.out.println("A new triangle is created");
+    }
 
-	@Override
-	public float area() {
-		// TODO Auto-generated method stub
-		return 0;
-	}
+    public void parameters() {
+        System.out.println("Side A: " + sideA + ", Side B: " + sideB + ", Side C: " + sideC + ", Height: " + height);
+    }
 
-	@Override
-	public float perimeter() {
-		// TODO Auto-generated method stub
-		return 0;
-	}
-	
+    public float area() {
+        return 0.5f * height * sideA;
+    }
+
+    public float perimeter() {
+        return sideA + sideB + sideC;
+    }
+
+    boolean rectangular() {
+        return Math.pow(sideA, 2) + Math.pow(sideB, 2) == Math.pow(sideC, 2);
+    }
+}
+
+class Sphere implements Two_D_Shape, Three_D_Shape {
+    float radius;
+
+    Sphere(float radius) {
+        this.radius = radius;
+        System.out.println("A new sphere has been created");
+    }
+
+    public void parameters() {
+        System.out.println("Radius: " + radius);
+    }
+
+    public float area() {
+        return 4 * PI * radius * radius;
+    }
+
+    public float perimeter() {
+        return 2 * PI * radius;
+    }
+
+    public float volume() {
+        return (4/3) * PI * radius * radius * radius;
+    }
 }
 
 public class Exercise1 {
@@ -79,11 +68,29 @@ public class Exercise1 {
 	public static void main(String[] args) {
 		
 		Triangle T1 = new Triangle(3,5,6,3);
-		Sphere B1 = new Sphere(4);
-		Two_D_Shape T2 = new Triangle(8,2,10,16);
-		Two_D_Shape B2 = new Sphere(3);
-		Three_D_Shape B3 = new Sphere(7);
-		
+        T1.parameters();
+        System.out.println("Area: " + T1.area());
+        System.out.println("Perimeter: " + T1.perimeter());
+        System.out.println("Is Rectangular: " + T1.rectangular());
+
+        Sphere B1 = new Sphere(4);
+        B1.parameters();
+        System.out.println("Area: " + B1.area());
+        System.out.println("Perimeter: " + B1.perimeter());
+        System.out.println("Volume: " + B1.volume());
+
+        Two_D_Shape T2 = new Triangle(8,2,10,16);
+        T2.parameters();
+        System.out.println("Area: " + T2.area());
+        System.out.println("Perimeter: " + T2.perimeter());
+
+        Two_D_Shape B2 = new Sphere(3);
+        B2.parameters();
+        System.out.println("Area: " + B2.area());
+        System.out.println("Perimeter: " + B2.perimeter());
+
+        Three_D_Shape B3 = new Sphere(7);
+        System.out.println("Volume: " + B3.volume());
 	}
 
 }
