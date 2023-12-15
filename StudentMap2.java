@@ -27,7 +27,7 @@ public class StudentMap22 {
 
 	    public static void main(String[] args) {
 	        Demo demo = new Demo();
-	        List<String> names = Arrays.asList("Jovan", "Bigorski", "Joakim", "Osogovski", "Charlie", "Paul", "Peter");
+	        List<String> names = Arrays.asList("Jovan", "Bigorski", "Joakim", "Osogovski", "Petar", "Pavel", "Lebron");
 	        Random rand = new Random();
 
 	        List<Student> students = names.stream()
